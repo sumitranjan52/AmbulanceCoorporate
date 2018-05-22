@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:padding="16dp"
+    tools:context="com.ambulance.corporate.DefaultActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ambulance Corporate"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="#ff0402"/>
+
+    <Button
+        android:id="@+id/btnFindBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Let's Drive"
+        android:background="@drawable/btn_bg"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

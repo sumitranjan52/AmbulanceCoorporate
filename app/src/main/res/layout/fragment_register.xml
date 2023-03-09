@@ -32,11 +32,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="provide your name, email, phone, username, vehicle information and create a password" />
+            android:text="Provide your name, email, phone, username, vehicle information and create a password" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/txtName"
@@ -54,7 +56,9 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/usernameRegister"
@@ -72,7 +76,10 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom"
+            >
 
             <EditText
                 android:id="@+id/emailRegister"
@@ -90,7 +97,9 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/phoneRegister"
@@ -109,7 +118,9 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/passwordRegister"
@@ -127,7 +138,9 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/drivingLicenceRegister"
@@ -145,7 +158,9 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom">
 
             <EditText
                 android:id="@+id/vehicleRegister"
@@ -162,7 +177,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:id="@+id/btnCreate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

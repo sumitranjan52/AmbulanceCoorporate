@@ -32,13 +32,16 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center"
-            android:text="use your username and password to login" />
+            android:text="Use your username and password to login" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:layout_marginBottom="6dp"
+            android:gravity="bottom"    
+            >
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/usernameLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -54,7 +57,10 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/text_input_layout_height"
+            android:gravity="bottom"
+            android:layout_marginBottom="6dp"
+            >
 
             <EditText
                 android:id="@+id/passwordLogin"
@@ -71,7 +77,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <Button
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_bg"
@@ -85,6 +91,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/forgetLink"
             android:textSize="16sp"
+            android:padding="8dp"
             android:textColor="@color/colorAccent"
             android:layout_below="@id/loginForm"
             android:text="Forgot password?"/>
@@ -95,9 +102,10 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:textSize="16sp"
+            android:padding="8dp"
             android:id="@+id/createAccountLink"
             android:textColor="@color/colorPrimary"
-            android:text="not having one? create one here"/>
+            android:text="Not having one? Create one here"/>
 
     </LinearLayout>
 

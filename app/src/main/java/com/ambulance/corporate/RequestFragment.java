@@ -467,12 +467,12 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
         protected void onPostExecute(List<List<HashMap<String, String>>> lists) {
             super.onPostExecute(lists);
 
-            ArrayList points;
+            ArrayList<LatLng> points;
             PolylineOptions polyOptions = null;
 
             for (int i = 0; i < lists.size(); i++) {
 
-                points = new ArrayList();
+                points = new ArrayList<LatLng>();
                 polyOptions = new PolylineOptions();
 
                 List<HashMap<String, String>> path = lists.get(i);
@@ -496,9 +496,9 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                 polyOptions.geodesic(true);
 
             }
-
-            mMap.addPolyline(polyOptions);
-
+            if(polyOptions != null){
+                mMap.addPolyline(polyOptions)  ;
+            }
         }
 
     }

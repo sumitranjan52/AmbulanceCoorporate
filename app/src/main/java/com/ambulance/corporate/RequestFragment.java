@@ -230,6 +230,7 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                         String phone = response.getJSONObject("response").getString("phone");
                         double lat = Double.parseDouble(response.getJSONObject("response").getString("lat"));
                         double lng = Double.parseDouble(response.getJSONObject("response").getString("lng"));
+                        String dmKey = response.getJSONObject("response").getString("dmKey");
 
                         rName.setText(name);
                         rMobile.setText(phone);
@@ -239,8 +240,8 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                         Common.userLat = lat;
                         Common.userLng = lng;
 
-                        String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + Common.latitude + "," + Common.longitude +
-                                "&destinations=" + lat + "," + lng + "&mode=driving&language=en-US";
+                        String url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=" + Common.latitude + "," + Common.longitude +
+                                "&destinations=" + lat + "," + lng + "&mode=driving&language=en&key=" + dmKey;
 
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null
                                 , new Response.Listener<JSONObject>() {

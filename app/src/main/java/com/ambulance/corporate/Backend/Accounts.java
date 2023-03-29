@@ -324,6 +324,9 @@ public class Accounts {
             case "DELETED":
                 return "User deleted Successfully!";
 
+            case "ACCOUNT_UNDER_REVIEW":
+                return "Your registration is successful and account is currently under review. It will be activated after manual check. Please try login after activation";
+
             default:
                 return "Something went wrong";
 

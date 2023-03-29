@@ -234,6 +234,9 @@ public class LocationToServer {
             case "NOTHING_CHANGED":
                 return "Nothing changed in remote database.";
 
+            case "ACCOUNT_INACTIVE":
+                return "Your account is under review. Please try again later.";
+
             default:
                 return "Something went wrong";
 

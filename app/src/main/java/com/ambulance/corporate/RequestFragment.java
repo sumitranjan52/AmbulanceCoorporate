@@ -230,7 +230,7 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                         String phone = response.getJSONObject("response").getString("phone");
                         double lat = Double.parseDouble(response.getJSONObject("response").getString("lat"));
                         double lng = Double.parseDouble(response.getJSONObject("response").getString("lng"));
-                        String dmKey = response.getJSONObject("response").getString("dmKey");
+                        Common.GOOGLE_MAP_API_KEY = response.getJSONObject("response").getString("dmKey");
 
                         rName.setText(name);
                         rMobile.setText(phone);
@@ -240,8 +240,8 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                         Common.userLat = lat;
                         Common.userLng = lng;
 
-                        String url = "https://api.distancematrix.ai/maps/api/distancematrix/json?origins=" + Common.latitude + "," + Common.longitude +
-                                "&destinations=" + lat + "," + lng + "&mode=driving&language=en&key=" + dmKey;
+                        String url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + Common.latitude + "," + Common.longitude +
+                                "&destinations=" + lat + "," + lng + "&mode=driving&language=en&key=" + Common.GOOGLE_MAP_API_KEY;
 
                         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null
                                 , new Response.Listener<JSONObject>() {
@@ -402,7 +402,7 @@ public class RequestFragment extends Fragment implements OnMapReadyCallback, Vie
                     "transit_routing_preference=less_driving&" +
                     "origin=" + currentPosition.latitude + "," + currentPosition.longitude + "&" +
                     "destination=" + lat + "," + lng + "&" +
-                    "key=" + mContext.getResources().getString(R.string.google_maps_key);
+                    "key=" + Common.GOOGLE_MAP_API_KEY;
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, requestAPI, null
                     , new Response.Listener<JSONObject>() {

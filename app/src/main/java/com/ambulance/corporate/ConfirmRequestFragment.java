@@ -215,7 +215,7 @@ public class ConfirmRequestFragment extends Fragment implements OnMapReadyCallba
                     "transit_routing_preference=less_driving&" +
                     "origin=" + currentPosition.latitude + "," + currentPosition.longitude + "&" +
                     "destination=" + lat + "," + lng + "&" +
-                    "key=" + mContext.getResources().getString(R.string.google_maps_key);
+                    "key=" + Common.GOOGLE_MAP_API_KEY;
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, requestAPI, null
                     , new Response.Listener<JSONObject>() {

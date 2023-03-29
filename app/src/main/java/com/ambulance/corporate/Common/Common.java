@@ -14,7 +14,7 @@ public class Common {
     public static final String LOG_TAG = "CORPORATE";
 
    // public static final String BASE_URL = "http://hiva26.com/ambulanceapi/";
-    public static final String BASE_URL = "http://ec2-13-235-91-70.ap-south-1.compute.amazonaws.com/ambulanceapi/";
+    public static final String BASE_URL = "http://ec2-13-235-79-14.ap-south-1.compute.amazonaws.com/ambulanceapi/";
     public static final String DRIVER_URL = "driver.php";
     public static final String TOKEN_URL = "fcm.php";
     public static final String LOCATION_URL = "driverLocation.php";
@@ -22,6 +22,8 @@ public class Common {
     public static final String FARE_URL = "fare.php";
 
     public static final String API_KEY = "b1816167ecba02ec2b99ffbf79fa59bc";
+
+    public static String GOOGLE_MAP_API_KEY = "";
 
     /* Requester details summary */
     public static String emergencyRequestBookingID = null;
